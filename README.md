@@ -1,2 +1,2 @@
 # Python_VP3_LR
-Лабораторные работы Высокоуровневого программирования по мере изучения языка
+High-level programming labs as i learn the language
