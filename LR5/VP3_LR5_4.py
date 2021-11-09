@@ -46,18 +46,15 @@ class dec(BF):
 
 class prt(BF):
     def execute(self, mass, i):
-        i1 = i
-        r1 = mass[i]
         print(chr(mass[i]), end="")
 
 class inp(BF):
     def execute(self, mass, i):
-        mass[i] = input("Введите символ: ")[0].encode("utf-8")
+        mass[i] = ord(input("Введите символ: ")[0])
 
 class whl(BF):
     def execute(self, mass, i, code, m):
         if(mass[i]==0):
-            # перейти вперёд по тексту программы на ячейку, следующую за соответствующей ']' (с учётом вложенности);
             isinside=1
             while(isinside):
                 m+=1
@@ -70,7 +67,6 @@ class whl(BF):
 class whr(BF):
     def execute(self, mass, i, code, m):
         if (mass[i]!=0):
-            # перейти назад по тексту программы на символ '[' (с учётом вложенности)
             isinside=1
             while(isinside):
                 m-=1
@@ -81,9 +77,9 @@ class whr(BF):
         return m
 
 
-
-# create Hello world in bf code
-strch = "Hello world\n"
+# demonstration of the program
+# create string x 5 (with loop) in BF code
+strch = "Hello World\n"
 strint = strch.encode("utf-8")
 strplus = [['+'for i in range(el)] for el in strint]
 strcode = ""
@@ -92,8 +88,11 @@ for it in strplus:
 out = "".join([".>"for i in range(len(strch))])
 back = "".join(["<"for i in range(len(strch))])
 CODE = strcode+"+++++"+"["+back+out+"-]"
-
-CODE = ",>,>,.<.<."
+# nested loop
+CODE = ">++++++++[<+++++++++>-]<.>>+>+>++>[-]+<[>[->+<<++++>]<<]>.+++++++..+++.>>+++++++.<<<<+++++++++++++++.>>.+++.------.--------.>>+.>++++."
+# print characters in reverse order
+inoutstr = ",>,>,.<.<."
+CODE = inoutstr
 
 
 # execution bf code
