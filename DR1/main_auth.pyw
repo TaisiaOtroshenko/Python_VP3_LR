@@ -1,14 +1,7 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtWidgets import QMainWindow, QLabel, QGridLayout, QWidget
-from PyQt5.QtWidgets import QPushButton
-
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
-from PyQt5.QtCore import QSize    
-
 import sys
 
-# Импортируем наш модуль интерфейса my.py
 from auth import *
 
 class MyWin(QtWidgets.QMainWindow):
