@@ -1,0 +1,16 @@
+{
+    "students": [
+        {
+            "name": "Scott",
+            "marks": [45,78,89]
+        },
+        {
+            "name": "Larry",
+            "marks": [89,90,100]
+        },
+        {
+            "name": "Tim",
+            "marks": [56,89]
+        }
+    ]
+}
