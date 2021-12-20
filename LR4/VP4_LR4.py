@@ -4,10 +4,10 @@ import csv
 print("\t\tВП3_ЛР4 Вариант 4")
 print("\tЗадание 1:")
 # Определить количество чисел, меньших среднего арифметического в файле
-with open("D:\git_repos\VP3\LR4\mas.txt", "w") as ftxt:
+with open("D:\git_repos\Python_VP3_LR\LR4\mas.txt", "w") as ftxt:
     mas=[(str(round(random.randint(0,99)/random.randint(2,10),2))+"\n") for i in range(20)]
     ftxt.writelines(mas)
-with open("D:\git_repos\VP3\LR4\mas.txt", "r") as ftxt:
+with open("D:\git_repos\Python_VP3_LR\LR4\mas.txt", "r") as ftxt:
     count = 0 
     mean = 0
     for it in [float(it) for it in ftxt.read().strip().split('\n')]:
@@ -39,7 +39,7 @@ with open("book.csv", "r", encoding="utf-8", newline="") as fcsv:
             
 print("\tЗадание 3:")
 # Вывести данные с файла на консоль с использованием кортежа
-with open("D:\git_repos\VP3\LR4\str.txt", "r") as f:
+with open("D:\git_repos\Python_VP3_LR\LR4\str.txt", "r") as f:
     for line in f:
         t = tuple(line.strip().split(", "))
         print(t)
